@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout with Flexbox and Grid</title>
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #000000;
+      color: white;
+      padding: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    /* Main content area */
+    .main-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .content {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #000000;
+      color: white;
+    }
+
+    /* Media Queries */
+    /* Tablet */
+    @media (max-width: 768px) {
+      .main-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <div class="content">Content 1</div>
+    <div class="content">Content 2</div>
+    <div class="content">Content 3</div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Mwaniki's Website</p>
+  </footer>
+
+</body>
+</html>
